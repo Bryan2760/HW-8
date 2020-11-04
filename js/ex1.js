@@ -3,11 +3,11 @@ fetch("https://raw.githubusercontent.com/bpesquet/thejsway/master/resources/pain
   .then(paintings => {
     const info = document.getElementById("paintings");
     paintings.forEach(painting => {
-      const paintingPrint = document.createElement("tr");
-      paintingPrint.innerHTML = `<td> ${painting.name} </td> 
+      const paint = document.createElement("tr");
+      paint.innerHTML = `<td> ${painting.name} </td> 
       <td> ${painting.year} </td>
       <td> ${painting.artist} </td>`;
-      info.appendChild(paintingPrint);
+      info.appendChild(paint);
     });
   })
   .catch(err => {
